@@ -5,13 +5,14 @@ body {
   color: #272839;
 }
 a { color: #4c5fd5; text-decoration: none; }
-.header, .hero {
+
+/* HERO */
+.hero {
   background: linear-gradient(120deg,#3D4E81 40%,#F7F7F7 100%);
   color: #fff;
   text-align: center;
   padding: 5rem 1rem 2rem 1rem;
-  position: relative;
-  margin-bottom: 1.2rem;
+  margin-bottom: 0;
 }
 .avatar-container { margin: 0 auto 1rem auto; }
 .avatar {
@@ -23,17 +24,36 @@ a { color: #4c5fd5; text-decoration: none; }
 .hero a { color: #fff; font-weight: 700; margin: 0 0.35em; }
 .hero span { color: #49c5b6; font-weight: 700;}
 .meta { margin-top: 0.5em; color: #e6e7ed; font-size:1.03em; }
-main { max-width: 980px; margin: 2.5rem auto; padding: 1rem; }
-h2 { border-bottom: 2px solid #eaeaea; padding-bottom:0.20em; color: #23316d; margin-top:2.2em; }
-.profile blockquote {
-  font-size:1.15em;color:#165baa;background: #eaf4fb;border-radius:12px;
-  margin:1.7em auto 1em auto;padding:1.2em 1.6em;max-width:700px;
-  line-height:1.35;box-shadow:0 2px 18px rgba(73,197,182,.08);
-  font-weight:600;text-align:center;letter-spacing:0.01em;
+
+/* MAIN */
+main { max-width: 980px; margin: 0 auto; padding: 1rem; }
+h2 { 
+  border-bottom: 2px solid #eaeaea; 
+  padding-bottom:0.25em; 
+  color: #23316d; 
+  margin-top:2.5em;
+  margin-bottom: 1.2em;
 }
-.skills-graphic { text-align: center; }
-.skills-graphic img { max-width: 420px; margin: 0 auto 1.2em auto;
-  border-radius: 18px; box-shadow: 0 2px 12px #3d4e8165;}
+
+/* PERFIL AMPLIO (NO TARJETA) */
+.profile-wide {
+  background: transparent;
+  padding: 2.5rem 1.5rem 1rem 1.5rem;
+  margin-bottom: 1rem;
+  line-height: 1.7;
+}
+.profile-wide h2 {
+  margin-top: 0;
+  font-size: 1.8em;
+}
+.profile-wide p {
+  font-size: 1.08em;
+  margin-bottom: 1.3em;
+  color: #3a3d52;
+  text-align: justify;
+}
+
+/* CARDS EXPERIENCIA/FORMACIÓN */
 .cards-section { margin: 3em 0;}
 .cards-grid { display: flex; flex-wrap: wrap; gap: 2.1em; justify-content: center; }
 .card-fx {
@@ -49,13 +69,78 @@ h2 { border-bottom: 2px solid #eaeaea; padding-bottom:0.20em; color: #23316d; ma
 .card-fx .date { color: #49c5b6; font-weight:700; font-size:.97em;}
 .card-fx p { font-size:.99em; margin-bottom:.15em; }
 .card-fx.edu { border-left: 7px solid #49c5b6;}
-.card-fx:hover { transform: translateY(-7px) scale(1.042);
-  box-shadow: 0 14px 40px rgba(60,80,124,.22);}
-.other ul { columns:2; margin:1em 0 0 0;padding:0 0 0 1.3em;}
-footer {
-  text-align: center; padding: 1em 0 .7em 0;
-  color: #999bb7; font-size: 0.97em; background:transparent; border-top:1px solid #eaeaea;
+.card-fx:hover { 
+  transform: translateY(-7px) scale(1.042);
+  box-shadow: 0 14px 40px rgba(60,80,124,.22);
 }
+
+/* BARRAS DE HABILIDADES */
+.skills-bars {
+  margin: 3em 0 2em 0;
+  padding: 2rem 1.5rem;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 6px 24px rgba(60,80,124,.12);
+}
+.skills-bars h2 {
+  margin-top: 0;
+}
+.skills-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.4em;
+}
+.skill-item {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+.skill-name {
+  min-width: 220px;
+  font-weight: 600;
+  color: #23316d;
+  font-size: 0.98em;
+}
+.skill-bar {
+  flex: 1;
+  height: 28px;
+  background: #e8eaf6;
+  border-radius: 14px;
+  overflow: hidden;
+  position: relative;
+}
+.skill-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #4c5fd5 0%, #49c5b6 100%);
+  border-radius: 14px;
+  transition: width 0.8s ease;
+  box-shadow: inset 0 2px 4px rgba(0,0,0,.1);
+}
+
+/* OTROS */
+.other {
+  margin: 2em 0;
+  padding: 1.5rem;
+}
+.other ul { 
+  columns:2; 
+  margin:1em 0 0 0;
+  padding:0 0 0 1.3em;
+}
+.other li {
+  margin-bottom: 0.7em;
+}
+
+/* FOOTER */
+footer {
+  text-align: center; padding: 1.2em 0 .9em 0;
+  color: #999bb7; font-size: 0.97em; 
+  background:transparent; 
+  border-top:1px solid #eaeaea;
+  margin-top: 3em;
+}
+
+/* ANIMACIONES */
 @keyframes fadeUp {
   from {opacity:0; transform:translateY(22px);}
   to   {opacity:1; transform:translateY(0);}
@@ -63,5 +148,12 @@ footer {
 .card-fx { animation-delay:.13s;}
 .card-fx:nth-child(2) { animation-delay:.19s;}
 .card-fx:nth-child(3) { animation-delay:.26s;}
-.card-fx:nth-child(4) { animation-delay:.32s;}
-.card-fx:nth-child(5) { animation-delay:.38s;}
+.card-fx:nth-child(4) { animation-delay:.38s;}
+.card-fx:nth-child(5) { animation-delay:.45s;}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .skill-name { min-width: 160px; font-size: 0.92em; }
+  .other ul { columns: 1; }
+  .profile-wide p { text-align: left; }
+}
