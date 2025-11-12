@@ -1,35 +1,179 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>José Berrón Sobrado - CV</title>
-  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Nunito:400,700" rel="stylesheet"/>
-  <link rel="stylesheet" href="assets/css/style.css"/>
-</head>
-<body>
-  <header class="hero">
-    <div class="hero-overlay"></div>
-    <div class="hero-content">
-      <div class="avatar-container">
-        <img src="assets/images/avatar-jose.png" class="avatar" alt="Foto José Berrón Sobrado"/>
-      </div>
-      <h1>José Berrón Sobrado</h1>
-      <p class="hero-title">Project Manager · Ingeniero Informático</p>
-      <p>
-        <a href="mailto:Jose.Berron@gmail.com">Jose.Berron@gmail.com</a>
-        <span>•</span>
-        <a href="https://www.linkedin.com/in/joseberron/" target="_blank">LinkedIn</a>
-      </p>
-      <p class="meta">Madrid, España</p>
-    </div>
-  </header>
+body {
+  font-family: 'Nunito', 'Montserrat', Arial, sans-serif;
+  background: #f7f8fb;
+  margin: 0;
+  color: #272839;
+}
+a { color: #4c5fd5; text-decoration: none; }
 
-  <main>
-    <section class="profile-wide">
-      <h2>Sobre mí</h2>
-      <p>
-        Ingeniero Informático con más de 15 años de experiencia liderando proyectos de transformación digital y desarrollo de software en sectores público y privado. Especialista en tecnologías .NET (C#, VB), gestión ágil de equipos multidisciplinares y arquitectura de soluciones escalables.
-      </p>
-      <p>
-        Mi trayectoria incluye roles de dirección técnica en el Instituto Cervantes, gestión de proyectos críticos para centrales nucleares (CNAT), y desarrollo de sistemas
+/* HERO CON IMAGEN DE FONDO */
+.hero {
+  position: relative;
+  background-image: url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1920&q=80');
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  text-align: center;
+  padding: 5rem 1rem 2rem 1rem;
+  margin-bottom: 0;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(35, 49, 109, 0.75);
+  z-index: 1;
+}
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+.avatar-container { margin: 0 auto 1rem auto; }
+.avatar {
+  width: 140px; height: 140px; border-radius: 50%;
+  border: 5px solid #49c5b6; object-fit: cover;
+  box-shadow: 0 4px 24px rgba(60,80,124,.23);
+}
+.hero-title { font-size: 1.3em; color: #49c5b6; margin-bottom: 0.4em; }
+.hero a { color: #fff; font-weight: 700; margin: 0 0.35em; }
+.hero span { color: #49c5b6; font-weight: 700;}
+.meta { margin-top: 0.5em; color: #e6e7ed; font-size:1.03em; }
+
+/* MAIN */
+main { max-width: 980px; margin: 0 auto; padding: 1rem; }
+h2 { 
+  border-bottom: 2px solid #eaeaea; 
+  padding-bottom:0.25em; 
+  color: #23316d; 
+  margin-top:2.5em;
+  margin-bottom: 1.2em;
+}
+
+/* PERFIL AMPLIO */
+.profile-wide {
+  background: transparent;
+  padding: 2.5rem 1.5rem 1rem 1.5rem;
+  margin-bottom: 1rem;
+  line-height: 1.7;
+}
+.profile-wide h2 {
+  margin-top: 0;
+  font-size: 1.8em;
+}
+.profile-wide p {
+  font-size: 1.08em;
+  margin-bottom: 1.3em;
+  color: #3a3d52;
+  text-align: justify;
+}
+
+/* CARDS */
+.cards-section { margin: 3em 0;}
+.cards-grid { display: flex; flex-wrap: wrap; gap: 2.1em; justify-content: center; }
+.card-fx {
+  background: #fff; border-radius: 16px; box-shadow: 0 10px 28px rgba(60,80,124,.18);
+  padding: 2rem 1.6rem; width: 310px; max-width:90vw;
+  transition: transform 0.22s, box-shadow 0.25s; position: relative;
+  animation: fadeUp .4s ease forwards;
+  opacity:0; margin-bottom:1.3em;
+}
+.card-fx .card-icon img { width: 44px; height: 44px; margin-bottom: .8em; }
+.card-fx h3 { font-size:1.13em; margin-top:0.2em;margin-bottom:.3em;color:#23316d;}
+.card-fx .entidad { font-size: 1em; color: #49c5b6;margin-left: 0.6em;}
+.card-fx .date { color: #49c5b6; font-weight:700; font-size:.97em;}
+.card-fx p { font-size:.99em; margin-bottom:.15em; }
+.card-fx.edu { border-left: 7px solid #49c5b6;}
+.card-fx:hover { 
+  transform: translateY(-7px) scale(1.042);
+  box-shadow: 0 14px 40px rgba(60,80,124,.22);
+}
+
+/* BARRAS HABILIDADES */
+.skills-bars {
+  margin: 3em 0 2em 0;
+  padding: 2rem 1.5rem;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 6px 24px rgba(60,80,124,.12);
+}
+.skills-bars h2 {
+  margin-top: 0;
+}
+.skills-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.4em;
+}
+.skill-item {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+.skill-name {
+  min-width: 220px;
+  font-weight: 600;
+  color: #23316d;
+  font-size: 0.98em;
+}
+.skill-bar {
+  flex: 1;
+  height: 28px;
+  background: #e8eaf6;
+  border-radius: 14px;
+  overflow: hidden;
+  position: relative;
+}
+.skill-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #4c5fd5 0%, #49c5b6 100%);
+  border-radius: 14px;
+  transition: width 0.8s ease;
+  box-shadow: inset 0 2px 4px rgba(0,0,0,.1);
+}
+
+/* OTROS */
+.other {
+  margin: 2em 0;
+  padding: 1.5rem;
+}
+.other ul { 
+  columns:2; 
+  margin:1em 0 0 0;
+  padding:0 0 0 1.3em;
+}
+.other li {
+  margin-bottom: 0.7em;
+}
+
+/* FOOTER */
+footer {
+  text-align: center; padding: 1.2em 0 .9em 0;
+  color: #999bb7; font-size: 0.97em; 
+  background:transparent; 
+  border-top:1px solid #eaeaea;
+  margin-top: 3em;
+}
+
+/* ANIMACIONES */
+@keyframes fadeUp {
+  from {opacity:0; transform:translateY(22px);}
+  to   {opacity:1; transform:translateY(0);}
+}
+.card-fx { animation-delay:.13s;}
+.card-fx:nth-child(2) { animation-delay:.19s;}
+.card-fx:nth-child(3) { animation-delay:.26s;}
+.card-fx:nth-child(4) { animation-delay:.38s;}
+.card-fx:nth-child(5) { animation-delay:.45s;}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .skill-name { min-width: 160px; font-size: 0.92em; }
+  .other ul { columns: 1; }
+  .profile-wide p { text-align: left; }
+}
