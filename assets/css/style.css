@@ -1,0 +1,45 @@
+body {
+  font-family: 'Nunito', 'Montserrat', Arial, sans-serif;
+  background: #f7f8fb;
+  margin: 0;
+  color: #222;
+}
+.header {
+  background: #23316d;
+  color: #fff;
+  padding: 2rem;
+  text-align: center;
+  border-bottom: 4px solid #4c5fd5;
+}
+.subtitle, .meta { font-weight: 600; margin: 0.3em 0; }
+a { color: #4c5fd5; text-decoration: none; }
+main { max-width: 900px; margin: 2.5rem auto; padding: 1rem; }
+h2 { border-bottom: 2px solid #eaeaea; padding-bottom: 0.25em; color: #23316d; }
+.profile, .skills, .certifications { margin-bottom: 2rem; }
+.skills ul, .certifications ul { columns: 2; padding-left: 1rem; margin: 0; }
+.timeline-container {
+  position: relative;
+  margin-left: 2.5rem;
+  margin-bottom: 2rem;
+}
+.timeline-item {
+  position: relative;
+  margin-bottom: 2em;
+  padding-left: 2em;
+  border-left: 2px solid #4c5fd5;
+}
+.timeline-circulo {
+  position: absolute;
+  left: -1.18em;
+  top: 0.5em;
+  width: 1.2em;
+  height: 1.2em;
+  background: #fff;
+  border: 3px solid #4c5fd5;
+  border-radius: 50%;
+}
+.timeline-item.exp .timeline-circulo { background: #4c5fd5; }
+.timeline-item.educ .timeline-circulo { background: #fff; border-color: #bbb; }
+.timeline-sub { color: #666; font-size: 0.95em; margin-bottom: 0.25em; }
+.entidad { font-size: 0.95em; color: #4c5fd5; margin-left: 0.8em; }
+footer { text-align: center; padding: 1rem 0; color: #888; font-size: 0.95em;}
