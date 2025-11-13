@@ -13,6 +13,12 @@ const expData = [
     fecha: "Ene 2023 – Abr 2023",
     detalle: "Desarrollo de aplicaciones para centrales nucleares (Oracle, VB.NET, JavaScript), optimización e integración.",
     icon: "job.svg"
+  }, {
+    titulo: "Programador Senior",
+    entidad: "SANDAV - Empresarios Agrupados Internacional",
+    fecha: "Ago 2022 – Abr 2023",
+    detalle: "Desarrollo de aplicaciones para centrales nucleares (Oracle, VB.NET, JavaScript), optimización e integración.",
+    icon: "job.svg"
   },
   {
     titulo: "Product Owner/Jefe de Proyectos",
@@ -32,6 +38,13 @@ const expData = [
     titulo: "Analista Programador",
     entidad: "PBL Services",
     fecha: "Dic 2010 – Jul 2018",
+    detalle: "Desarrollo y mantenimiento de aplicaciones en C, VB, ASP.NET. Administración de servidores y soporte.",
+    icon: "job.svg"
+  },
+  {
+    titulo: "Analista Programador",
+    entidad: "Grupo Backup S.A.",
+    fecha: "Sep 2006 – Dic 2010",
     detalle: "Desarrollo y mantenimiento de aplicaciones en C, VB, ASP.NET. Administración de servidores y soporte.",
     icon: "job.svg"
   }
