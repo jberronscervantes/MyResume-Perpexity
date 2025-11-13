@@ -16,7 +16,7 @@ const expData = [
   }, {
     titulo: "Programador Senior",
     entidad: "SANDAV - Empresarios Agrupados Internacional",
-    fecha: "Ago 2022 – Abr 2023",
+    fecha: "Ago 2022 – Dic 2022",
     detalle: "Desarrollo de aplicaciones para centrales nucleares (Oracle, VB.NET, JavaScript), optimización e integración.",
     icon: "job.svg"
   },
